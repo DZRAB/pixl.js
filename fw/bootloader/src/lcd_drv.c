@@ -40,7 +40,7 @@ void lcd_init(void) {
     lcd_write_command(0xB0); /*set page address*/
     lcd_write_command(0x81); /*contract control*/
     lcd_write_command(0xcf); /*128*/
-    lcd_write_command(0xA1); /*set segment remap*/
+    lcd_write_command(0xA0); /*set segment remap*/ //由0xA1修改0xA0
     lcd_write_command(0xA7); /*normal / reverse*/ //由0xA6修改0xA7
     lcd_write_command(0xA8); /*multiplex ratio*/
     lcd_write_command(0x3F); /*duty = 1/64*/
