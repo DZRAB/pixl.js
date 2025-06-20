@@ -9,7 +9,6 @@
 #include <stdio.h>
 
 #include "boards.h"
-#include <fw\components\u8g2\csrc\u8g2.h>
 
 #ifdef OLED_TYPE_SH1106
 #define LCD_X_SIZE 132
@@ -59,7 +58,6 @@ void lcd_init(void) {
     lcd_write_command(0x12);
     lcd_write_command(0xdb); /*set vcomh*/
     lcd_write_command(0x40);
-    u8g2_SetDisplayRotation(U8G2_R2);
     lcd_clear();
     lcd_write_command(0xAF); /*display ON*/
 

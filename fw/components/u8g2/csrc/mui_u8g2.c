@@ -187,6 +187,7 @@ uint8_t mui_template(mui_t *ui, uint8_t msg)
 
 /*=========================================================================*/
 /* extra u8g2 drawing functions */
+u8g2_SetDisplayRotation(U8G2_R2);
 
 static void u8g2_DrawCheckbox(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t w, u8g2_uint_t is_checked) MUI_NOINLINE;
 static void u8g2_DrawCheckbox(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, u8g2_uint_t w, u8g2_uint_t is_checked)
