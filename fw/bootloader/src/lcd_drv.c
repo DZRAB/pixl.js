@@ -41,13 +41,13 @@ void lcd_init(void) {
     lcd_write_command(0x81); /*contract control*/
     lcd_write_command(0xcf); /*128*/
     lcd_write_command(0xA1); /*set segment remap*/
-    lcd_write_command(0xA6); /*normal / reverse*/
+    lcd_write_command(0xA7); /*normal / reverse*/ //由0xA6修改0xA7
     lcd_write_command(0xA8); /*multiplex ratio*/
     lcd_write_command(0x3F); /*duty = 1/64*/
     lcd_write_command(0xad); /*set charge pump enable*/
     lcd_write_command(0x8b); /* 0x8B ÄÚ¹© VCC */
     lcd_write_command(0x33); /*0X30---0X33 set VPP 9V */
-    lcd_write_command(0xC8); /*Com scan direction*/
+    lcd_write_command(0xC0); /*Com scan direction*/ //由0xC8修改0xC0
     lcd_write_command(0xD3); /*set display offset*/
     lcd_write_command(0x00); /* 0x20 */
     lcd_write_command(0xD5); /*set osc division*/
