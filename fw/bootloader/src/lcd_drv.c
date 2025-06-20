@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 #include "boards.h"
-#include "u8g2.h"
+#include <u8g2.h>
 
 #ifdef OLED_TYPE_SH1106
 #define LCD_X_SIZE 132
