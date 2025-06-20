@@ -58,6 +58,7 @@ void lcd_init(void) {
     lcd_write_command(0x12);
     lcd_write_command(0xdb); /*set vcomh*/
     lcd_write_command(0x40);
+    u8g2_SetDisplayRotation(U8G2_R2);
     lcd_clear();
     lcd_write_command(0xAF); /*display ON*/
 
