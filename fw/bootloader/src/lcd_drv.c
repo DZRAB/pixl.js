@@ -40,14 +40,14 @@ void lcd_init(void) {
     lcd_write_command(0xB0); /*set page address*/
     lcd_write_command(0x81); /*contract control*/
     lcd_write_command(0xcf); /*128*/
-    lcd_write_command(0xA1); /*set segment remap*/
-    lcd_write_command(0xA6); /*normal / reverse*/
+    lcd_write_command(0xA0); /*set segment remap*/ //由0xA1修改0xA0
+    lcd_write_command(0xA7); /*normal / reverse*/ //由0xA6修改0xA7
     lcd_write_command(0xA8); /*multiplex ratio*/
     lcd_write_command(0x3F); /*duty = 1/64*/
     lcd_write_command(0xad); /*set charge pump enable*/
     lcd_write_command(0x8b); /* 0x8B ÄÚ¹© VCC */
     lcd_write_command(0x33); /*0X30---0X33 set VPP 9V */
-    lcd_write_command(0xC8); /*Com scan direction*/
+    lcd_write_command(0xC0); /*Com scan direction*/ //由0xC8修改0xC0
     lcd_write_command(0xD3); /*set display offset*/
     lcd_write_command(0x00); /* 0x20 */
     lcd_write_command(0xD5); /*set osc division*/
@@ -66,8 +66,8 @@ void lcd_init(void) {
     lcd_write_command(0xe2); // 软复位
     delay(10);
     lcd_write_command(0xa2); // 升压电路,电压管理电路
-    lcd_write_command(0xa0); // 0x20~0x27 为V5电压内部电阻调整设置
-    lcd_write_command(0xc8); // 设置EV 对比度
+    lcd_write_command(0xa1); // 0x20~0x27 为V5电压内部电阻调整设置
+    lcd_write_command(0xc0); // 设置EV 对比度
     lcd_write_command(0x23); // 对比度值
 
     lcd_write_command(0x81); // 0x01~0x3f电量寄存器设置模式
@@ -76,7 +76,7 @@ void lcd_init(void) {
     lcd_write_command(0x2f); // 0xc0正向扫描, 0xc8反向扫描
     lcd_write_command(0xb0); // 0xa6正向显示, 0xa7反向显示
     lcd_write_command(0xAF); // 0xa4正常显示, 0xa5全屏显示
-    lcd_write_command(0xA6); // 背压比设置
+    lcd_write_command(0xA7); // 背压比设置
     // lcd_write_command(0x10);		//背压比值:0~10
     // lcd_write_command(0xaf);		//开显示
 #endif
