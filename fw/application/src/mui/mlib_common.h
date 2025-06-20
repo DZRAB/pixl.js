@@ -9,10 +9,10 @@
 #define M_MEMORY_FREE(ptr) mui_mem_free(ptr)
 
 
-//#include "m-array.h"
-//#include "m-string.h"
-//#include "m-dict.h"
-//#include "m-deque.h"
+#include "m-array.h"
+#include "m-string.h"
+#include "m-dict.h"
+#include "m-deque.h"
 
 ARRAY_DEF(string_array, string_t, STRING_OPLIST)
 ARRAY_DEF(ptr_array, void*, M_BASIC_OPLIST )
