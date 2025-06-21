@@ -204,9 +204,6 @@ static void u8g2_DrawValueMark(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, u8g2_
   u8g2_DrawBox(u8g2, x, y-w, w, w);
 }
 
-u8g2_Setup_sh1106_128x64_noname_f(p_u8g2, U8G2_R2, u8x8_HW_com_spi_nrf52832, u8x8_gpio_Delay);
-u8g2_InitDisplay(p_u8g2);
-
 /*=========================================================================*/
 /* helper function */
 
